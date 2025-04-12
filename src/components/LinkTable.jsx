@@ -28,7 +28,7 @@ const LinkTable = ({ data }) => {
             <tr key={link._id} className="border-t hover:bg-gray-50">
               <td className="p-2 max-w-xs truncate">{link.originalUrl}</td>
               <td className="p-2 text-blue-600 underline">
-                <a href={`http://localhost:5000/${link.shortCode}`} target="_blank" rel="noreferrer">
+                <a href={`https://link-analytics-backend-3m68.onrender.com/${link.shortCode}`} target="_blank" rel="noreferrer">
                   {`/${link.shortCode}`}
                 </a>
               </td>
@@ -37,14 +37,14 @@ const LinkTable = ({ data }) => {
               <td className="p-2">{link.expirationDate ? new Date(link.expirationDate).toLocaleDateString() : '—'}</td>
               <td className="p-2 flex space-x-2">
                 <button
-                  onClick={() => handleCopy(`http://localhost:5000/${link.shortCode}`)}
+                  onClick={() => handleCopy(`https://link-analytics-backend-3m68.onrender.com/${link.shortCode}`)}
                   className="bg-gray-200 px-2 py-1 rounded text-sm"
                 >
                   Copy
                 </button>
                 <button
                   onClick={() => {
-                    setSelectedLink(`http://localhost:5000/${link.shortCode}`);
+                    setSelectedLink(`https://link-analytics-backend-3m68.onrender.com/${link.shortCode}`);
                     setQrOpen(true);
                   }}
                   className="bg-blue-200 px-2 py-1 rounded text-sm"
